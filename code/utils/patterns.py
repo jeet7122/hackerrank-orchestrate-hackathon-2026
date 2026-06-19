@@ -189,3 +189,16 @@ PART_PATTERNS = {
         "item"
     ]
 }
+
+RISK_FLAGS = [
+    "blurry_image",
+    "cropped_or_obstructed",
+    "low_light_or_glare",
+    "wrong_angle",
+    "wrong_object",
+    "wrong_object_part",
+    "damage_not_visible",
+    "claim_mismatch",
+    "possible_manipulation",
+    "non_original_image"
+]

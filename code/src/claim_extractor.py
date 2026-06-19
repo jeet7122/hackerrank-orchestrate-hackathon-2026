@@ -3,6 +3,12 @@ from utils.patterns import PROMPT_INJECTION_PATTERNS, ISSUE_PATTERNS, PART_PATTE
 
 class ClaimExtractor:
     
+    
+    """
+    #########################################################################
+    Extracts object s
+    #########################################################################
+    """
     def extract(
         self,
         user_claim: str,
@@ -21,7 +27,11 @@ class ClaimExtractor:
         )
         
      
-    
+    """
+    #########################################################################
+    finds injected prompts in conversations to avoid malware
+    #########################################################################
+    """
     def _detect_prompt_injection(
         self,
         text: str
@@ -31,6 +41,11 @@ class ClaimExtractor:
                 return True
         return False   
     
+    """
+    #########################################################################
+    extract issue for provdided classified set of issues
+    #########################################################################
+    """
     def _extract_issue(
         self,
         text: str
@@ -41,6 +56,11 @@ class ClaimExtractor:
                     return issue
         return "unknown" 
     
+    """
+    #########################################################################
+    finds exact part from conversation text
+    #########################################################################
+    """
     def _extract_part(
         self,
         text: str
