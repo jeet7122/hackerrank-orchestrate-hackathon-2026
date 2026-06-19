@@ -12,7 +12,6 @@ class ClaimExtractor:
     def extract(
         self,
         user_claim: str,
-        claim_object: str,
     ) -> ClaimTarget:
         
         text = user_claim.lower()

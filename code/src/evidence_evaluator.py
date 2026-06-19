@@ -3,6 +3,14 @@ from utils.patterns import RISK_FLAGS
 
 class EvidenceEvaluator:
     
+    UNREVIEWABLE_FLAGS =  {
+    "blurry_image",
+    "cropped_or_obstructed",
+    "low_light_or_glare",
+    "wrong_angle",
+    }
+
+    
     def evaluate(
         self,
         claim_object: str,
@@ -15,12 +23,12 @@ class EvidenceEvaluator:
             if observation.visible_object != claim_object:
                 continue
             
-            if observation.visible_object != claim_target.object_part:
+            if observation.visible_part != claim_target.object_part:
                 continue
             
             if any(
-                flag in RISK_FLAGS
-                for flag in observation.risK_flags
+                flag in self.UNREVIEWABLE_FLAGS
+                for flag in observation.risk_flags
             ): continue
             
             supporting_image_ids.append(observation.image_id)

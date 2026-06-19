@@ -10,7 +10,7 @@ from dataclasses import dataclass, field
 @dataclass
 class ClaimInput:
     user_id: str
-    image_path: list[str]
+    image_paths: list[str]
     user_claim: str
     claim_object: str
     
@@ -48,20 +48,8 @@ class ImageObservation:
     visible_issue: str
     severity: str
     valid_image: str
-    risK_flags: list[str]
+    risk_flags: list[str]
     
-
-"""
-############################################################################
---------------------------------MODULE THREE--------------------------------
-############################################################################
-"""
-
-@dataclass
-class EvidenceAssessment:
-    evidence_standart_met: bool
-    evidence_standart_met_reason: str
-
 
 """
 ############################################################################
@@ -71,7 +59,7 @@ class EvidenceAssessment:
 @dataclass
 class ClaimResult:
     user_id: str
-    image_path: str
+    image_paths: str
     user_claim: str
     claim_object: str
     evidence_standard_met: str
@@ -90,4 +78,18 @@ class EvidenceResult:
     evidence_standard_met: bool
     evidence_standard_met_reason: str
     supporting_image_ids: list[str]
+    
+
+@dataclass
+class DecisionResult:
+    claim_status: str
+    claim_status_justification: str
+    issue_type: str
+    object_part: str
+    severity: str
+    
+@dataclass
+class RiskResult:
+    risk_flags: list[str]
+    valid_image: bool
     
