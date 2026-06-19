@@ -85,5 +85,9 @@ class ClaimResult:
     valid_image: str
     severity: str
 
-
+@dataclass
+class EvidenceResult:
+    evidence_standard_met: bool
+    evidence_standard_met_reason: str
+    supporting_image_ids: list[str]
     
