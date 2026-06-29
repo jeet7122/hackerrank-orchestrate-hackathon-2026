@@ -3,6 +3,7 @@ from utils.patterns import PROMPT_INJECTION_PATTERNS, ISSUE_PATTERNS, PART_PATTE
 
 class ClaimExtractor:
     
+    GENERIC_DAMAGE_PATTERNS = [ "damage", "damaged", "affected", "issue", "something wrong", "looks off", "looks different", "problem", "not right" ]
     
     """
     #########################################################################
@@ -53,6 +54,10 @@ class ClaimExtractor:
             for pattern in patterns:
                 if pattern in text:
                     return issue
+        for pattern in self.GENERIC_DAMAGE_PATTERNS:
+            if pattern in text:
+                return "generic_damage"
+            
         return "unknown" 
     
     """

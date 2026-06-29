@@ -87,6 +87,7 @@ class DecisionResult:
     issue_type: str
     object_part: str
     severity: str
+    supporting_image_ids: list[str]
     
 @dataclass
 class RiskResult:

@@ -3,11 +3,11 @@ from models.model import UserHistory
 
 class UserHistoryLoader:
     
-    def laod(self, file_path: str) -> dict[str, UserHistory]:
+    def load(self, file_path: str) -> dict[str, UserHistory]:
         df = pd.read_csv(file_path) 
         
         history_map = {}
-        for _, row in df.iterrows:
+        for _, row in df.iterrows():
             
             flags = []
 

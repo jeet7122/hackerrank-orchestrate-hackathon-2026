@@ -7,7 +7,7 @@ class ClaimsLoader:
         
         claims = []
         
-        for _,row in df.iterrows:
+        for _,row in df.iterrows():
             claims.append(
                 ClaimInput(
                     user_id=row["user_id"],
