@@ -1,0 +1,27 @@
+Hackerrank Orchestrate – Chat Transcript
+
+Note:
+The AGENTS.md automatic logging mechanism was not active in the development environment used for this submission. This file is a manually compiled transcript summarizing the AI-assisted development process used to build the solution.
+
+Tool Used:
+ChatGPT
+
+Summary of Development Conversations:
+
+* Designed overall claim-verification architecture.
+* Defined data models matching the competition schema.
+* Implemented CSV data loaders.
+* Built claim extraction logic using pattern matching.
+* Integrated Gemini Vision for image analysis.
+* Designed structured image-analysis prompts.
+* Implemented observation normalization.
+* Implemented evidence evaluation logic.
+* Implemented decision engine for supported / contradicted / not_enough_information outcomes.
+* Implemented risk evaluation logic.
+* Built claim processing pipeline.
+* Added CSV output generation.
+* Added resume and rate-limit handling.
+* Tested predictions against sample data.
+* Generated final output.csv.
+
+End of transcript.
